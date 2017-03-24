@@ -1,0 +1,39 @@
+[
+	{
+		"args":
+		{
+			"by": "words",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "$j"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "("
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"by": "wordends",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": ")"
+		},
+		"command": "insert"
+	}
+]

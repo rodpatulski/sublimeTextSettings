@@ -1,0 +1,4 @@
+{
+	// run cfml_inline_documentation command on hover
+	"cfml_hover_docs": false,
+}

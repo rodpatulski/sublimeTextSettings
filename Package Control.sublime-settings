@@ -1,0 +1,31 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Better Bookmarks",
+		"BracketHighlighter",
+		"CFML",
+		"Filter Lines",
+		"Git",
+		"HTML-CSS-JS Prettify",
+		"Modific",
+		"Package Control",
+		"PlainNotes",
+		"Python Breakpoints",
+		"SelectUntil",
+		"SideBarEnhancements",
+		"StringEncode",
+		"SublimeLinter",
+		"SublimeLinter-contrib-scss-lint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-pylint",
+		"Syntax Highlighting for Sass",
+		"Terminal"
+	],
+	"repositories":
+	[
+	]
+}
