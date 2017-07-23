@@ -5,16 +5,26 @@
 	],
 	"installed_packages":
 	[
-		"Better Bookmarks",
+		"Babel",
+		"BetterFindBuffer",
 		"BracketHighlighter",
+		"Case Conversion",
 		"CFML",
+		"Color Highlighter",
+		"Compare Side-By-Side",
+		"EJS 2",
 		"Filter Lines",
 		"Git",
+		"GitHub Markdown Snippets",
 		"HTML-CSS-JS Prettify",
+		"INI",
+		"Local History",
+		"MarkdownLivePreview",
 		"Modific",
+		"Origami",
 		"Package Control",
-		"PlainNotes",
 		"Python Breakpoints",
+		"RegReplace",
 		"SelectUntil",
 		"SideBarEnhancements",
 		"StringEncode",
@@ -23,7 +33,8 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-pylint",
 		"Syntax Highlighting for Sass",
-		"Terminal"
+		"Terminal",
+		"TypeScript"
 	],
 	"repositories":
 	[

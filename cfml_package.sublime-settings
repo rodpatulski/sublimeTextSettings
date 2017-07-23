@@ -1,4 +1,10 @@
 {
 	// run cfml_inline_documentation command on hover
 	"cfml_hover_docs": false,
+	// color scheme styles to inject for Lucee/CFML tags
+	// valid keys are "foreground" and "fontStyle"
+	// "foreground": "#RRGGBB", "#RGB" or ""
+	// "fontStyle": "bold", "italic", "bold italic", or ""
+	"cfml_tag_style": { "foreground": "#4C9BB0", "fontStyle": "" },
+	"cfml_tag_attribute_style": { "foreground": "#366d7d", "fontStyle": "" }
 }

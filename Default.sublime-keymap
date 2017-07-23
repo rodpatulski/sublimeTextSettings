@@ -1,5 +1,129 @@
 [
-    { "keys": ["f2"], "command": "sublime_bookmark", "args" : { "type" : "goto_next" } },
-    { "keys": ["super+f2"], "command": "sublime_bookmark", "args" : { "type" : "goto" } },
-    { "keys": ["super+shift+f2"], "command": "sublime_bookmark", "args" : { "type" : "add"  } },
+	// dump macros
+    //{ "keys": ["command+d"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfdumpAndAbort.sublime-macro"} },
+    //{ "keys": ["alt+command+d"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfdump.sublime-macro"} },
+    //{ "keys": ["command+shift+d"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/writeDump.sublime-macro"} },
+    //{ "keys": ["command+alt+u"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfDumpArguments.sublime-macro"} },
+	//{ "keys": ["command+alt+t"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfDumpAttributes.sublime-macro"} },
+
+    //CFML package
+    // alt+a <cfabort>/<:abort>
+    {
+        "keys": ["alt+a"],
+        "command": "insert_snippet",
+        "args": {"contents": "<cfabort>"},
+        "context": [
+          {"key": "selector", "operator": "equal", "operand": "embedding.cfml"},
+          {"key": "selector", "operator": "not_equal", "operand": "source.cfml.script"}
+        ]
+    },
+        {
+        "keys": ["alt+a"],
+        "command": "insert_snippet",
+        "args": {"contents": "abort;"},
+        "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.cfml.script"}
+        ]
+    }, 
+    // super+d writeDump()/dump();
+    {
+        "keys": ["super+d"],
+        "command": "insert_snippet",
+        "args": {"contents": "writeDump(${0:$SELECTION});"},
+        "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.cfml.script"}
+        ]
+    },
+    // super+d  <cfdump var="##">/<:dump var="##">
+    {
+        "keys": ["command+d"],
+        "command": "insert_snippet",
+        "args": {"contents": "<cfdump var=\"#${1:$SELECTION}#\" abort=\"true\">"},
+        "context": [
+          {"key": "selector", "operator": "equal", "operand": "embedding.cfml"},
+          {"key": "selector", "operator": "not_equal", "operand": "source.cfml.script"}
+        ]
+    },
+    // command+alt+u  <cfdump var="#arguments#">/<:dump var="##">
+    {
+        "keys": ["command+alt+u"],
+        "command": "insert_snippet",
+        "args": {"contents": "<cfdump var=\"#arguments#\" abort=\"true\">"},
+        "context": [
+          {"key": "selector", "operator": "equal", "operand": "embedding.cfml"},
+          {"key": "selector", "operator": "not_equal", "operand": "source.cfml.script"}
+        ]
+    },
+    // command+alt+t  <cfdump var="#attributes#">/<:dump var="##">
+    {
+        "keys": ["command+alt+t"],
+        "command": "insert_snippet",
+        "args": {"contents": "<cfdump var=\"#attributes#\" abort=\"true\">"},
+        "context": [
+          {"key": "selector", "operator": "equal", "operand": "embedding.cfml"},
+          {"key": "selector", "operator": "not_equal", "operand": "source.cfml.script"}
+        ]
+    },
+    // command+o  <cfoutput>/<:output>
+    {
+      "keys": ["command+o"],
+      "command": "insert_snippet",
+      "args": {"contents": "<cfoutput>${1:$SELECTION}</cfoutput>"},
+      "context": [
+        {"key": "selector", "operand": "embedding.cfml"},
+        {"key": "selector", "operator": "not_equal", "operand": "source.cfml.script"}
+      ]
+    },
+    // command+o  writeOutput()
+    {
+      "keys": ["command+o"],
+      "command": "insert_snippet",
+      "args": {"contents": "writeOutput(${1:$SELECTION})"},
+      "context": [
+        {"key": "selector", "operand": "source.cfml.script" }
+      ]
+    },
+
+	{ "keys": ["command+shift+i"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfifWrap.sublime-macro"} },
+	//{ "keys": ["alt+a"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfAbort.sublime-macro"} },
+	//{ "keys": ["command+o"], "command": "run_macro_file", "args": {"file": "Packages/ColdFusion/cfOutput.sublime-macro"} },
+	//{ "keys": ["command+shift+c"], "command": "run_macro_file", "args": {"file": "Packages/User/copyLine.sublime-macro"} },
+	{ "keys": ["alt+f"], "command": "reveal_in_side_bar" },
+    
+    // find shortcuts
+	{ "keys": ["alt+g"], "command": "find_under_expand" },
+	{ "keys": ["super+g"], "command": "find_under" },
+    { "keys": ["alt+super+g"], "command": "find_all_under" },
+
+    { "keys": ["super+;"], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} },
+    { "keys": ["alt+super+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+    { "keys": ["f12"], "command": "gotodefinition" },
+    { "keys": ["f11"], "command": "renamevariable" },
+    { "keys": ["alt+super+up"], "command": "jump_between_changes", "args": {"direction": "prev"} },
+    { "keys": ["alt+super+down"], "command": "jump_between_changes", "args": {"direction": "next"} },
+    { "keys": ["ctrl+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+down"], "command": "swap_line_down" },
+    { "keys": ["alt+d"], "command": "duplicate_line" },
+    { "keys": ["f3"], "command": "next_bookmark" },
+	{ "keys": ["shift+f3"], "command": "prev_bookmark" },
+	{ "keys": ["super+f3"], "command": "toggle_bookmark" },
+	{ "keys": ["super+shift+f3"], "command": "clear_bookmarks" },
+	{ "keys": ["alt+f3"], "command": "select_all_bookmarks" },
+	{ "keys": ["super+alt+l"], "command": "alignment" },
+	// Select text between brackets
+	{
+        "no_outside_adj": null,
+        "keys": ["alt+s"],
+        "command": "bh_key",
+        "args":
+        {
+            "lines" : true,
+            "plugin":
+            {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect"
+            }
+        }
+    },
+    { "keys": ["super+k", "super+d"], "command": "goto_definition" },
 ]

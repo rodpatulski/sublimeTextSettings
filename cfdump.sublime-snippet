@@ -1,0 +1,12 @@
+<snippet>
+	<content>
+		<![CDATA[
+<cfdump var="#$1#" abort="${2:true}" label="$1">
+	
+]]>
+	</content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dd</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>embedding.cfml</scope>
+</snippet>
